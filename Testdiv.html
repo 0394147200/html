@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* dấu * áp dụng cho tất cả thành phần trong trang web*/
+        * {
+            cursor: url(rocket_24.png), auto !important;
+        }
+
+        input {
+            border: 1px solid sienna;
+            background-color: silver;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /*các thẻ input khi click chuột vào*/
+        input:focus {
+            /* đường viền ngoài khi bấm chọn vào ô (mặc định màu đen)*/
+            outline-color: blue;
+            /*Nếu muốn bỏ thì đổi thành  outline: none;  */
+        }
+
+        /*Tuỳ chỉnh phần chữ ẩn*/
+        input::placeholder {
+            color: navy;
+        }
+
+        /*dùng cho tất cả các thẻ div*/
+        div {
+            border: 1px solid sienna;
+            padding: 5px;
+
+            /*Bo tròn viền*/
+            border-radius: 15px;
+        }
+
+        /**Dùng cho những thẻ có class là gt*/
+        .gt {
+            margin-top: 5px;
+            padding-top: 10px;
+            padding-left: 10px;
+            height: 50px;
+
+            /*đổ bóng hộp*/
+            box-shadow: 10px 10px 10px black;
+            /*           x     y   z*/
+        }
+
+        h1 {
+            /*đổ bóng chữ*/
+            text-shadow: 5px 5px 5px black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Xin chào</h1>
+    <form>
+        <div>
+            <span>Họ: </span><input type="text" placeholder="Nhập họ">
+            Tên: <input type="text" placeholder="Nhập tên"></div>
+        <div>
+            Ngày sinh: <input type="number" min="1" max="31" step="1" value="5"></div>
+        <div class="gt">
+            Giới tính: <input type="radio" name="gioitinh" checked>Nam
+            <input type="radio" name="gioitinh">Nữ<br></div>
+        </div>
+    </form>
+</body>
+
+</html>
